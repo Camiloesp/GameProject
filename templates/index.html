@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% comment %} Title {% endcomment %}
+{% block title %}
+    <title>Simon Says Menu</title>
+{% endblock %}
+
+
+
+{% comment %} Body {% endcomment %}
+{% block body %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <br>
+        <div class="row">
+            <input type="submit" value="Play" name="start" class="btn btn-outline-info btn-lg btn-block">
+        </div>
+        <br>
+        <div class="row">
+            <input type="submit" value="How to Play" name="how" class="btn btn-outline-info btn-lg btn-block">
+        </div>
+        <br>
+        <div class="row">
+            <input type="submit" value="Scores" name="scores" class="btn btn-outline-info btn-lg btn-block">
+        </div>
+        <br>
+    </form>
+{% endblock %}

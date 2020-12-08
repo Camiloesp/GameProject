@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% comment %} Title {% endcomment %}
+{% block title %}
+    <title>Simon Says Score</title>
+{% endblock %}
+
+
+{% comment %} Body {% endcomment %}
+{% block body %}
+    <div class="row">
+        <table class="table table-striped table-dark table-bordered" id="dtBasicExample">
+            <tr class="text-center">
+                <th><h2>Name</h2></th>
+                <th><h2>Score</h2></th>
+                <th><h3>Date</h3></th>
+            </tr>
+
+            {% for score in all_scores %}
+                <tr>
+                    <td> {{ score.name }} </td>
+                    <td> {{ score.score }} </td>
+                    <td> {{ score.date }} </td>
+                </tr>
+            {% endfor %}
+        </table>
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="submit" value="Back" name="back" class="btn btn-info">
+        </form>
+
+    </div>
+    <br>
+{% endblock %}
+

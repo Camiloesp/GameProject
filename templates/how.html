@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% comment %} Title {% endcomment %}
+{% block title %}
+    <title>Simon Says How To</title>
+{% endblock %}
+
+
+{% comment %} Body {% endcomment %}
+{% block body %}
+    <div>
+        <ul class="list-group">
+            <h1 class="display-4 text-info text-center">How to play?</h1>
+            <br>
+            <li class="list-group-item list-group-item-secondary">Simon will give signals. Repeat the signals by pressing the same color buttons.</li>
+            <li class="list-group-item list-group-item-dark">Simon will keep duplicating the amount of signals and the player needs to match the signals.</li>
+            <li class="list-group-item list-group-item-secondary">If you fail to repeat the signals, you fail!</li>
+        </ul>
+    </div>
+    <br>
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Back" name="back" class="btn btn-info">
+        <input type="submit" value="Start Playing" name="play" class="btn btn-primary pull-right">
+    </form>
+    <br>
+{% endblock %}
+
+

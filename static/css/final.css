@@ -1,0 +1,32 @@
+#red button{
+	background-color: #b51500;
+	width: 100px;
+	height: 100px;
+}
+#red button:hover{
+	background-color: red;
+}
+#yellow button{
+	background-color: #b0b300;
+	width: 100px;
+	height: 100px;
+}
+#yellow button:hover{
+	background-color: yellow;
+}
+#green button{
+	background-color: green;
+	width: 100px;
+	height: 100px;
+}
+#green button:hover{
+	background-color: #00ab0e;
+}
+#blue button{
+	background-color: blue;
+	width: 100px;
+	height: 100px;
+}
+#blue button:hover{
+	background-color: #61a3ff;
+}

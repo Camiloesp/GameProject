@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% comment %} Title {% endcomment %}
+{% block title %}
+    <title>Simon Says Game</title>
+{% endblock %}
+{% comment %} Body {% endcomment %}
+{% block body %}
+    <div class="row">
+        <div id="red" class="col-6-lg"><button id="redB" onclick="pressed(0)">Red</button></div>
+        <div id="yellow" class="col-6-lg"><button id="yellowB" onclick="pressed(1)">Yellow</button></div>
+    </div>
+    <div class="row">
+        <div id="green" class="col-6-lg"><button id="greenB" onclick="pressed(2)">Green</button></div>
+        <div id="blue" class="col-6-lg"><button id="blueB" onclick="pressed(3)">Blue</button></div>
+    </div>
+    <div class="row">
+        <div id="score" class="col-12-lg">Score: 0</div>
+    </div>
+    <div class="row">
+        <div class="col-12-lg"><button onclick="start()">Start</button></div>
+    </div>
+    <script src="{% static "js/final.js" %}"></script>
+    <br>
+{% endblock %}
